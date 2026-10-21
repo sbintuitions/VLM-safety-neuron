@@ -43,7 +43,7 @@ IMAGES = DATA / "images"
 
 with open(REPO_ROOT / "configs" / "pipeline.yaml") as _f:
     PROCEDURAL = yaml.safe_load(_f)["data"]["harmful_image"]["query_template"]  # the ViSafe-Detect query
-GENERATED_ZIP_URL = ("https://huggingface.co/datasets/Jiaxuan-Li/ViSafe-Eval-generated/resolve/main/"
+GENERATED_ZIP_URL = ("https://huggingface.co/datasets/sbintuitions/ViSafe-Eval-generated-internal/resolve/main/"
                      "visafe_eval_generated_images.zip")
 GENERATED_SHA = DATA / "generated_images.sha256"
 
