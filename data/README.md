@@ -6,7 +6,7 @@ Paths in this file are relative to `data/`.
 
 | Set | Manifest | Size | Rebuilt by |
 |---|---|---|---|
-| Text detection | `text/text_detection.jsonl` | 900 harmful + 900 safe queries | `../src/text_manifest.py` (on the fly, when `run_iterative_text.py` starts) |
+| Text detection | `text/text_detection.jsonl` | 900 harmful + 900 safe rows | `../src/text_manifest.py` (on the fly, when `run_iterative_text.py` starts) |
 | ViSafe-Detect | `visafe_detect/visafe_detect.jsonl` | 2,417 harmful + 2,417 safe entries | `build/fetch_visafe_detect.py` |
 | ViSafe-Eval | `visafe_eval/intents.jsonl`, `visafe_eval/visafe_eval.jsonl` | 472 intents | `build/fetch_visafe_eval.py` |
 
@@ -15,14 +15,14 @@ A pointer to a row of a Hugging Face dataset has the fields `hf_repo`, `hf_confi
 
 ## Text detection set
 
-The text detection set has 1,800 queries. It takes 300 harmful queries each from BeaverTails, HarmBench and AdvBench, plus 900 Alpaca instructions.
+The text detection set has 1,800 rows. It takes 300 harmful rows each from BeaverTails, HarmBench and AdvBench, plus 900 Alpaca instructions.
 
 ```json
 {"source": "BeaverTails", "label": "harmful", "hf_repo": "PKU-Alignment/BeaverTails", "hf_config": null,
  "hf_split": "30k_train", "hf_row": 4154, "text_sha1_16": "55cc0f10c5428cbb"}
 ```
 
-`run_iterative_text.py` splits the 1,800 queries 80/20 (stratified, seed 42) into the detection set and an in-distribution validation set, and writes the split to `data_split.json`. Detection keeps the harmful queries the model refuses and the safe queries it answers, so the positives and negatives differ per model.
+`run_iterative_text.py` splits the queries 80/20 (stratified, seed 42) into the detection set and an in-distribution validation set, and writes the split to `data_split.json`. Detection keeps the harmful queries the model refuses and the safe queries it answers, so the positives and negatives differ per model.
 
 
 ## ViSafe-Detect
@@ -39,7 +39,7 @@ LLM judges scored the candidates for image harm (1–5) and for how well the pro
            "crop_square_top": true}}
 ```
 
-`source` is `beavertails_v`, `hades`, `unsafebench`, `vlguard` or `holisafe` for harmful images and `safe` for the safe images (`image.hf_repo` names the dataset). `source_category` is the category the source dataset gives the image, and `harm_category` is one of 21 harm categories (both are `null` for safe images). `categories.json` lists how the categories of each source map to the 21. For VLGuard, `image` names a file in the dataset's archive (`"kind": "hf_zip"`).
+`source` is `beavertails_v`, `hades`, `unsafebench`, `vlguard` or `holisafe` for harmful images and `safe` for the safe images (`image.hf_repo` names the dataset). `source_category` is the category the source dataset gives the image, and `harm_category` is one of 21 harm categories (both are `null` for safe images). `categories.json` lists how the categories of each source map to the 21. For VLGuard, `image` names a file in the dataset's archive (`"kind": "hf_zip"`), `source_category` is `severity_<k>` (the image's folder in `train.zip`), and the category that `categories.json` maps is the `harmful_subcategory` of row `image.train_json_index` in VLGuard's `train.json`.
 
 `source_index` is the local file key used by the pipeline (`visafe_detect/images/<source>/<source_index>.jpg`, zero-padded to 5 digits). It is **not** a row number of the source dataset. The source row is given in `image`. `build/fetch_visafe_detect.py` writes the images and `visafe_detect/labels.jsonl`, which the visual pipeline reads.
 

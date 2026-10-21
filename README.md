@@ -29,17 +29,18 @@ Vision-language models (VLMs) can comply with harmful requests that arrive throu
 
 We tested our code with Python 3.10. One 80GB GPU is enough for the 2B to 9B models. We ran Qwen3-VL-32B and InternVL3.5-14B on 4 GPUs and Gemma-4-31B on 2. Visual detection keeps the activations of all images in CPU memory during a round, which takes about 9 GB (Qwen3-VL-2B) to 35 GB (InternVL3.5-14B) for the models up to 14B, about 65 GB for Gemma-4-31B and about 80 GB for Qwen3-VL-32B.
 
-Different model families need different `torch` and `transformers` versions. Please first install the pair that matches the model you run, and then the other dependencies:
+Different model families need different `torch` and `transformers` versions. Please first install the versions that match the model you run, and then the other dependencies:
 
-| Models | torch | transformers |
-|---|---|---|
-| Qwen2.5-VL-7B | 2.4.0 | 4.50.0 (run `unset WORLD_SIZE` before loading) |
-| InternVL3.5-8B / 14B | 2.4.0 | 4.51.3 for visual neurons, `main` branch of April 2026 for text neurons |
-| Qwen3-VL-2B / 8B / 32B, Qwen3.5-9B, Qwen3.5-9B-Thinking, GLM-4.1V-9B-Thinking | 2.4.0 | `main` branch of April–May 2026 |
-| Gemma-4-31B | 2.6.0 | `main` branch of April–May 2026 |
+| Models | torch | torchvision | transformers |
+|---|---|---|---|
+| Qwen2.5-VL-7B | 2.4.0 | 0.19.0 | 4.50.0 (run `unset WORLD_SIZE` before loading) |
+| InternVL3.5-8B / 14B | 2.4.0 | 0.19.0 | 4.51.3 for visual neurons, `main` branch of April 2026 for text neurons |
+| Qwen3-VL-2B / 8B / 32B, Qwen3.5-9B, Qwen3.5-9B-Thinking, GLM-4.1V-9B-Thinking | 2.4.0 | 0.19.0 | `main` branch of April–May 2026 |
+| Gemma-4-31B | 2.6.0 | 0.21.0 | `main` branch of April–May 2026 |
 
 ```bash
-pip install torch==<version> transformers==<version>   # the pair from the table
+pip install torch==<version> torchvision==<version> transformers==<version>   # the versions from the table
+# for a `main` row: pip install git+https://github.com/huggingface/transformers.git@<commit>
 pip install -r requirements.txt
 ```
 
@@ -94,7 +95,7 @@ The main files are:
 │   ├── model_registry.yaml          # Model keys, checkpoints and thinking settings
 │   └── pipeline.yaml                # Hyperparameters
 ├── data/
-│   ├── text/                        # Text detection set (1,800 queries)
+│   ├── text/                        # Text detection set (900 harmful + 900 safe rows)
 │   ├── visafe_detect/               # ViSafe-Detect manifest and the 21 harm categories
 │   ├── visafe_eval/                 # ViSafe-Eval intents and samples
 │   └── build/                       # Scripts that download and rebuild the datasets

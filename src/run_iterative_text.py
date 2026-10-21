@@ -1,6 +1,6 @@
 """Text safety-neuron detection with iterative ablation (paper Sec. 3).
 
-Data: the 900 harmful + 900 safe text queries of data/text/text_detection.jsonl, split 80/20
+Data: the 900 harmful + 900 safe rows of data/text/text_detection.jsonl, split 80/20
 (stratified) into the detection set and an in-distribution validation set that detection
 never sees.
 

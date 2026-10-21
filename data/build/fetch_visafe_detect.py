@@ -7,7 +7,7 @@ which is the layout src/run_stage1_screening.py and src/run_iterative_visual.py 
 
 Every row points to a row of a public dataset (for VLGuard, a file in its archive).
 HoliSafe, UnsafeBench and VLGuard are gated and need an approved Hugging Face token
-(HF_TOKEN or `huggingface-cli login`).
+(HF_TOKEN or `hf auth login`).
 The output is pixel-identical to the images we used (tested with Pillow 12.1).
 
 Usage:

@@ -19,7 +19,7 @@ Usage:
   python data/build/fetch_visafe_eval.py --generated-zip <path|URL>   # use a local copy of the zip
 
 HarmBench and ImageNet (ILSVRC/imagenet-1k) are gated and need an approved Hugging Face token
-(HF_TOKEN or `huggingface-cli login`).
+(HF_TOKEN or `hf auth login`).
 """
 
 import argparse
@@ -113,7 +113,7 @@ def fetch_generated(src):
         if not token:
             try:
                 from huggingface_hub import get_token
-                token = get_token()  # `huggingface-cli login`
+                token = get_token()  # `hf auth login`
             except ImportError:
                 pass
         if token:  # not sent on to the storage host the Hub redirects to
