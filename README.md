@@ -21,7 +21,7 @@ Vision-language models (VLMs) can comply with harmful requests that arrive throu
 - 📊 **ViSafe-Detect and ViSafe-Eval**: two benchmarks that separate visual from textual safety signals. ViSafe-Detect pairs harmful and safe images with one neutral query. ViSafe-Eval has 472 harmful intents, 8 image conditions and 3 query types.
 
 <p align="center">
-<img src="assets/teaser.png" width="70%" alt="Figure 1">
+<img src="assets/teaser.png" width="50%" alt="Figure 1">
 </p>
 
 
