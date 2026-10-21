@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Run outputs
+results/
+logs/
+*.npy
+*.pt
+
+# Datasets built locally by the fetch scripts (never committed)
+data/visafe_detect/images/
+data/visafe_detect/labels.jsonl
+data/visafe_eval/images/
+data/visafe_eval/metadata.jsonl
+
+.cache/
+
+# Plotting outputs
+figures/

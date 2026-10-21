@@ -1,0 +1,73 @@
+{
+ "classes": [
+  "animal_abuse",
+  "dangerous_behavior",
+  "deception_in_personal_relationships",
+  "environmental_damage",
+  "false_information",
+  "financial_and_academic_fraud",
+  "hacking_or_digital_crime",
+  "harmful_health_content",
+  "horror_and_gore",
+  "identity_misuse_and_impersonation",
+  "illegal_activity",
+  "insulting_and_harassing_behavior",
+  "pornographic_content",
+  "privacy_invasion_and_surveillance",
+  "psychological_harm_and_manipulation",
+  "psychological_horror_and_dark_themes",
+  "self_harm",
+  "sensitive_information_in_key_areas",
+  "sexual_crimes",
+  "terrorism_or_extremism",
+  "violence_and_physical_harm"
+ ],
+ "note": "harm_category = MAP[source][source_category]; for VLGuard the key is harmful_subcategory of the row in VLGuard train.json (its source_category is severity_<k>, k = the image's folder index in train.zip). The UnsafeBench 'Political' image is a riot scene.",
+ "map": {
+  "beavertails_v": {
+   "animal_abuse": "animal_abuse",
+   "dangerous_behavior": "dangerous_behavior",
+   "deception_in_personal_relationships": "deception_in_personal_relationships",
+   "environmental_damage": "environmental_damage",
+   "false_information": "false_information",
+   "financial_and_academic_fraud": "financial_and_academic_fraud",
+   "hacking_or_digital_crime": "hacking_or_digital_crime",
+   "harmful_health_content": "harmful_health_content",
+   "horror_and_gore": "horror_and_gore",
+   "identity_misuse_and_impersonation": "identity_misuse_and_impersonation",
+   "insulting_and_harassing_behavior": "insulting_and_harassing_behavior",
+   "pornographic_content": "pornographic_content",
+   "privacy_invasion_and_surveillance": "privacy_invasion_and_surveillance",
+   "psychological_harm_and_manipulation": "psychological_harm_and_manipulation",
+   "psychological_horror_and_dark_themes": "psychological_horror_and_dark_themes",
+   "sensitive_information_in_key_areas": "sensitive_information_in_key_areas",
+   "sexual_crimes": "sexual_crimes",
+   "terrorism_or_extremism": "terrorism_or_extremism",
+   "violence_and_physical_harm": "violence_and_physical_harm"
+  },
+  "hades": {
+   "Animal": "animal_abuse",
+   "Financial": "financial_and_academic_fraud",
+   "Privacy": "privacy_invasion_and_surveillance",
+   "Self-Harm": "self_harm",
+   "Violence": "violence_and_physical_harm"
+  },
+  "unsafebench": {
+   "Harassment": "insulting_and_harassing_behavior",
+   "Illegal activity": "illegal_activity",
+   "Political": "violence_and_physical_harm",
+   "Public and personal health": "harmful_health_content",
+   "Self-harm": "self_harm",
+   "Shocking": "horror_and_gore",
+   "Violence": "violence_and_physical_harm"
+  },
+  "holisafe": {
+   "illegal_activity/property_crime": "illegal_activity"
+  },
+  "vlguard": {
+   "violence": "violence_and_physical_harm",
+   "sexually explicit": "pornographic_content",
+   "race": "insulting_and_harassing_behavior"
+  }
+ }
+}

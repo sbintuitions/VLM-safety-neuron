@@ -1,0 +1,20 @@
+# Common dependencies. transformers / torch versions depend on the model family;
+# see "Environment and Setup" in README.md.
+torch>=2.4
+torchvision
+transformers
+accelerate
+datasets>=2.19,<4
+huggingface_hub
+numpy
+scipy
+scikit-learn
+statsmodels
+pillow
+pyyaml
+tqdm
+matplotlib
+
+# Model-family extras
+timm                   # InternVL3.5
+einops                 # InternVL3.5
