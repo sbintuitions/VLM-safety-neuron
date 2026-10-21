@@ -12,7 +12,7 @@ Sources:
                     our generated images (visafe_eval_generated_images.zip on Hugging Face,
                     checked against generated_images.sha256)
   blank, noise      generated here (a white image and Gaussian noise with a fixed seed)
-  safe              natural photos streamed from the Hugging Face Hub
+  safe              Places365 validation and ImageNet-1k validation rows (streamed)
 
 Usage:
   python data/build/fetch_visafe_eval.py                              # everything

@@ -61,7 +61,7 @@ ViSafe-Eval has 472 harmful intents (370 from MM-SafetyBench `Text_only` and 102
 | Image condition | Source |
 |---|---|
 | `natural_harmful` | MM-SafetyBench `SD` images (370), and ours: FLUX.1-schnell images (102) |
-| `safe` | natural photos from the Hugging Face Hub |
+| `safe` | Places365 validation (`dpdl-benchmark/Places365-Validation`, 238) and ImageNet-1k validation (`ILSVRC/imagenet-1k`, 234) |
 | `rendered`, `rendered_handwrite`, `rendered_poster` | ours: the intent text rendered as an image, in three styles |
 | `blank`, `noise` | made by `fetch_visafe_eval.py`, not shipped |
 
