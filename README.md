@@ -182,25 +182,12 @@ If you find this code useful, please consider citing our work:
 
 ```bibtex
 @inproceedings{li-etal-2026-vlms,
-    title = "Do {VLM}s Share Safety Neurons Across Modalities?",
-    author = "Li, Jiaxuan  and
-      Zhang, Jiahao  and
-      Vo, Duc Minh  and
-      Nguyen, Huy H.  and
-      Kavumba, Pride  and
-      Wataoka, Koki",
-    editor = "Lee, Hung-Yi  and
-      Dev, Sunipa  and
-      Li, Junyi Jessy  and
-      Elliott, Desmond",
+    title     = "Do {VLM}s Share Safety Neurons Across Modalities?",
+    author    = "Li, Jiaxuan and Zhang, Jiahao and Vo, Duc Minh and Nguyen, Huy H. and Kavumba, Pride and Wataoka, Koki",
     booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
-    month = oct,
-    year = "2026",
-    address = "Budapest, Hungary",
+    year      = "2026",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2026.emnlp-main.471/",
-    doi = "10.18653/2026.emnlp-main.471",
-    pages = "10822--10837",
-    ISBN = "979-8-89176-459-0"
+    url       = "https://aclanthology.org/2026.emnlp-main.471/",
+    pages     = "10822--10837",
 }
 ```
