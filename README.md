@@ -7,7 +7,7 @@ SB Intuitions Corp., Tokyo, Japan<br>
 </p>
 
 <p align="center">
-<a href="https://jiaxuan-li.github.io/vlm-safety-neuron/" style="text-decoration:none"><img src="https://img.shields.io/badge/🌐%20Project-Website-green?style=flat-square"></a>&nbsp;&nbsp;<a href="https://arxiv.org/abs/2608.30750" style="text-decoration:none"><img src="https://img.shields.io/badge/📄%20arXiv-2608.30750-red?style=flat-square"></a>&nbsp;&nbsp;<a href="https://huggingface.co/datasets/sbintuitions/ViSafe-Eval-generated" style="text-decoration:none"><img src="https://img.shields.io/badge/🤗%20Dataset-HuggingFace-orange?style=flat-square"></a>&nbsp;&nbsp;<a href="LICENSE" style="text-decoration:none"><img src="https://img.shields.io/badge/📜%20License-Apache%202.0-blue.svg?style=flat-square"></a>&nbsp;&nbsp;<a href="https://2026.emnlp.org/" style="text-decoration:none"><img src="https://img.shields.io/badge/EMNLP-2026-blue?style=flat-square"></a>
+<a href="https://jiaxuan-li.github.io/vlm-safety-neuron/" style="text-decoration:none"><img src="https://img.shields.io/badge/🌐%20Project-Website-green?style=flat-square"></a>&nbsp;&nbsp;<a href="https://arxiv.org/abs/2608.30750" style="text-decoration:none"><img src="https://img.shields.io/badge/📄%20arXiv-2608.30750-red?style=flat-square"></a>&nbsp;&nbsp;<a href="https://huggingface.co/datasets/sbintuitions/ViSafe-Eval-generated" style="text-decoration:none"><img src="https://img.shields.io/badge/🤗%20Dataset-HuggingFace-orange?style=flat-square"></a>&nbsp;&nbsp;<a href="LICENSE" style="text-decoration:none"><img src="https://img.shields.io/badge/📜%20License-Apache%202.0-blue.svg?style=flat-square"></a>&nbsp;&nbsp;<a href="https://aclanthology.org/2026.emnlp-main.471/" style="text-decoration:none"><img src="https://img.shields.io/badge/EMNLP-2026-blue?style=flat-square"></a>
 </p>
 
 > ⚠️ **Warning:** the datasets used in this repository contain harmful text and images.
@@ -182,10 +182,25 @@ If you find this code useful, please consider citing our work:
 
 ```bibtex
 @inproceedings{li-etal-2026-vlms,
-    title     = "Do {VLM}s Share Safety Neurons Across Modalities?",
-    author    = "Li, Jiaxuan and Zhang, Jiahao and Vo, Duc Minh and Nguyen, Huy H. and Kavumba, Pride and Wataoka, Koki",
+    title = "Do {VLM}s Share Safety Neurons Across Modalities?",
+    author = "Li, Jiaxuan  and
+      Zhang, Jiahao  and
+      Vo, Duc Minh  and
+      Nguyen, Huy H.  and
+      Kavumba, Pride  and
+      Wataoka, Koki",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Junyi Jessy  and
+      Elliott, Desmond",
     booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
-    year      = "2026",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
     publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.471/",
+    doi = "10.18653/2026.emnlp-main.471",
+    pages = "10822--10837",
+    ISBN = "979-8-89176-459-0"
 }
 ```
